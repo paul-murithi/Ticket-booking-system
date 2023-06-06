@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(205, 233, 227);
+}
+img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #808080;
+}
+button {
+    height: 2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 400ms;
+}
+h4, h5 {
+    margin-top: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+ul a {
+    color: #fff;
+    transition: ease-in-out 200ms;
+}
+a:hover {
+    color: rgb(173, 227, 215);
+    
+}
+.main-page-container {
+    background-color: #f4f3f3;
+    border-radius: 15px;
+    width: 90%;
+    margin: 5rem auto 0;
+}
+/* .page-1-grid-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 5px;
+    margin-bottom: 2rem;
+    
+} */
+.page-1-banner {
+    position: relative;
+}
+.page-1-banner img {
+    border-radius: 0;
+}
+.page-1-banner .nav-header-links {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.page-1-banner .nav-header-links p {
+    color: #b8b6b6;
+}
+.page-1-banner .nav-fl-links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+.page-1-banner h1 {
+    color: #fff;
+    font-size: 2rem;
+    white-space: nowrap;
+}
+
+.page-1-details .page-1-details-headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 1rem;
+}
+.page-1-details .page-1-details-par {
+    margin-left: 1rem;
+    
+}
+.page-1-details .page-1-details-btn {
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-1-details .page-1-details-btn button {
+    width: 45%;
+}
+.page-1-details .page-1-details-btn button:hover {
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+/*########################################*/
+.page-2-start-headers {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.gray-headers {
+    color: #808080;
+    opacity: 0.5;
+}
+.page-2-start-headers {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.page-2-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    padding: 5px;
+}
+.page-2-item-1 .page-2-subitem-1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.page-2-item-1 .page-2-subitem-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-2-item-1 .page-2-subitem-btn button {
+    width: 60%;
+    margin-top: 1.5rem;
+}
+ .page-2-item-1 .page-2-subitem-btn button:hover {
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+}
+.page-2-item-2 img {
+    height: 19rem;
+}
+.page-2-item-3 {
+    height: 19rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.page-2-item-3 h1 {
+    margin-bottom: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.page-2-item-3 p {
+    margin-bottom: 0.5rem;
+}
+/*955px*/
+.page-start-headers {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 2rem;
+}
+.page-3-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    padding: 5px;
+}
+.page-3-grid-container h3 {
+    text-align: center;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 1rem;
+}
+.page-3-more-btn {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+.page-3-more-btn button {
+    height: 3rem;
+    width: 50%;
+    margin: 1.5rem;
+}
+.page-3-more-btn button:hover {
+    border: 2px solid #000;
+    background-color: #fff;
+    color: #000;
+    font-size: medium;
+    font-weight: bolder;
+}
+/*#########################################*/
+.page-4-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    gap: 1rem;
+    padding: 6px;
+}
+.page-4-grid-container .page-4-item-1,.page-4-item-2 {
+    background-color: #fff;
+    border-radius: 15px;
+}
+.page-4-item-1 h4, p {
+    margin: 0.5rem;
+}
+.page-4-item-2 h4, p {
+    margin: 0.5rem;
+}
+.page-4-grid-container .page-4-item-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.page-4-grid-container .page-4-item-3 h2 {
+    margin-top: 1rem;
+    font-weight: bolder;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.page-4-item-3 .page-4-item-3-inpt {
+    border: 1px solid #000;
+    position: relative;
+    border-radius: 8px;
+    background-color: #fff;
+}
+.page-4-item-3-inpt input {
+    border: none;
+    outline: none;
+    height: 3rem;
+    width: 67%;
+    border-radius: 8px;
+    font-size: medium;
+}
+.page-4-item-3 button {
+    height: 2rem;
+    border-radius: 5px;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.5rem;
+    padding: 0.5rem;
+    background-color: #323232;
+}
+.page-4-item-3 button:hover {
+    background-color: #000;
+}
+.page-4-subitem-img {
+    border: 1px solid red;
+    margin: 2.5rem 0.5rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.page-4-subitem-img-1 {
+    background-image: url(/images/michael-dam-mEZ3PoFGs_k-unsplash_icon_3.jpg);
+}
+.page-4-subitem-img-2 {
+    background-image: url(/images/jd-mason-2oUiUu5QAys-unsplash_icon_1.jpg);
+}
+/*page 5*/
+/* ######################################### */
+.page-5-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 3rem;
+    gap: 1rem;
+    
+}
+
+.page-5-grid-container .img-card img {
+    height: 14rem;
+    
+}
+.page-5-grid-container .img-card {
+    background-color: #fff;
+    border-radius: 15px;
+}
