@@ -1,0 +1,32 @@
+img {
+    max-width: 100%;
+}
+.main-container {
+    height: 300px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.main-container div {
+    /* width: 100%; */
+    height: 200px;
+}
+.main-page-item-1 {
+    background-color: blue;
+    position: absolute;
+    z-index: 1;
+    top: 2rem;
+}
+.main-page-item-2 {
+    background-color: aqua;
+    position: absolute;
+    z-index: 2;
+    top: 5rem;
+}
+.main-page-item-3 {
+    background-color: blueviolet;
+    position: absolute;
+    z-index: 3;
+    top: 10rem;
+}
