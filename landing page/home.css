@@ -36,10 +36,11 @@ a:hover {
     
 }
 .main-page-container {
-    background-color: #f4f3f3;
+    background-color: #f0eaea;
     border-radius: 15px;
     width: 90%;
     margin: 5rem auto 0;
+    /* #f4f3f3 */
 }
 .page-1-grid-container {
     display: grid;
@@ -101,12 +102,11 @@ a:hover {
 }
 .page-2-start-headers {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 2rem;
 }
 .page-2-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 1.8rem;
     padding: 5px;
 }
@@ -150,8 +150,8 @@ a:hover {
     margin: 2rem;
 }
 .page-3-grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    
     gap: 1.8rem;
     padding: 5px;
 }
@@ -218,6 +218,7 @@ a:hover {
     width: 67%;
     border-radius: 8px;
     font-size: medium;
+    padding: 0 12px;
 }
 .page-4-item-3 button {
     height: 2rem;
@@ -232,7 +233,6 @@ a:hover {
     background-color: #000;
 }
 .page-4-subitem-img {
-    border: 1px solid red;
     margin: 2.5rem 0.5rem;
     height: 6rem;
     width: 6rem;
@@ -248,6 +248,10 @@ a:hover {
 }
 /*page 5*/
 /* ######################################### */
+.main-page-container-2 {
+    width: 90%;
+    margin: auto;
+}
 .page-5-grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -255,14 +259,53 @@ a:hover {
     gap: 1rem;
     
 }
-
-.page-5-grid-container .img-card img {
-    height: 14rem;
-    
+.main-page-container-2 .page-5-tour-btn {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
 }
-.page-5-grid-container .img-card {
+.main-page-container-2 .page-5-tour-btn button {
+    height: 3rem;
+    width: 20rem;
+}
+.main-page-container-2 .page-5-tour-btn button:hover {
+    border: 2px solid #000;
     background-color: #fff;
-    border-radius: 15px;
+    color: #000;
+    font-weight: bolder;
+}
+/* Page 6 */
+/* ######################################################### */
+.main-page-container-3 {
+    background-color: #f9f6f6;
+    /* #f7f6f6 */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+.main-page-container-3 .page-6-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-page-container-3 .page-6-container h2 {
+    margin-top: 2rem;
+}
+.main-page-container-3 .footer-hr-line {
+    border-bottom: 1px solid gray;
+    width: 90%;
+    margin: auto;
+}
+/* FOOTER */
+/*###################################################*/
+footer {
+    background-color: #f9f6f6;
+}
+footer .footer-grid-container {
+    display: flex;
+    justify-content: space-evenly;
+    /* margin: 2rem; */
+    padding: 25px;
 }
 
 
@@ -270,13 +313,11 @@ a:hover {
     .page-1-grid-container, .page-2-grid-container, .page-3-grid-container, .page-4-grid-container, .page-5-grid-container {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        
+        align-items: center;  
     }
     .page-2-start-headers {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
+    } 
 }
