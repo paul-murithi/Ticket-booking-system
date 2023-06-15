@@ -6,6 +6,7 @@
     "detect-css-reflows/composite": "off",
     "detect-css-reflows/layout": "off",
     "detect-css-reflows/paint": "off",
-    "highest-available-document-mode": "off"
+    "highest-available-document-mode": "off",
+    "no-inline-styles": "off"
   }
 }

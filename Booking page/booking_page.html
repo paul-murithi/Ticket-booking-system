@@ -5,29 +5,106 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Online booking</title>
+    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/Booking page/booking_page.css">
 </head>
 
 <body>
-    <!-- <nav>
-        <ul>
-            <li><a href="/landing page/home.html">Home</a></li>
-            <li><a href="#">Contact us</a></li>
-            <li>Sign up</li>
-        </ul>
-    </nav> -->
-    <div class="main-container">
-        <div class="main-page-item-1">
-            <h2>Economy class</h2>
+    <header class="bkn-pg-main-banner">
+        <div class="bkn-pg-banner-items">
+            <h2 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">TransitEase ticket booking</h2>
+            <p>Simplifying travel arrangements with TransitEase.</p>
         </div>
-        <div class="main-page-item-2">
-            <h2>Business class</h2>
+        <nav class="bkn-pg-main-navigation">
+            <ul class="login-navigation">
+                <li><a href="/landing page/home.html">Home</a></li>
+                <li><a target="_blank" href="/Booking page/booking_page.html">Book now </a></li>
+                <li><a href="/sign up/signup.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="page-1-grid-container">
+        <div class="page-1-grid-item-1">
+            <div class="page-1-details-headers">
+                <h1>Welcome</h1>
+                <h1>to TransitEase</h1>
+                <h1>Online booking</h1>
+            </div>
+            <div class="page-1-details-par">
+                <p>
+                    TransitEase travelling service provides travelers with genuine comfort they deserve - from the time you book your ticket to the time you board the bus.
+                </p>
+            </div>
         </div>
-        <div class="main-page-item-3">
-            <h2>VIP class</h2>
+        <div class="page-1-grid-item-2" style="margin-top: 2rem;">
+            <div class="page-1-grid-item-2-img">
+              <img src="/images/71643654f62e41b987ba690313d6551f_medium.jpg" alt="coming soon">
+            </div>
+        </div>
+    </section>
+
+    <div class="bkn-pg-main-item-1">
+        <h2 style="font-family: Arial, Helvetica, sans-serif; font-size: xx-large;">I would like to travel,</h2>
+        <form action="#" class="bkn-pg-form-fx">
+            <div class="bkn-pg-input-1 bkn-pg-input-items">
+                <label for="inpt-frm">from:</label>
+                <input type="text" id="inpt-frm" placeholder="e.g Nairobi">
+            </div>
+            <div class="bkn-pg-input-2 bkn-pg-input-items">
+                <label for="inpt-to">To:</label>
+                <input type="text" id="inpt-to" placeholder="e.g Mombasa">
+            </div>
+            <div class="bkn-pg-input-3 bkn-pg-input-items">
+                <label for="inpt-date">On this date:</label>
+                <input type="date" id="inpt-date" title="Date of travel">
+            </div>
+            <div class="bkn-pg-input-4 bkn-pg-input-items">
+                <button type="button" id="bkn-page-search-btn" title="search">Search:</button>
+            </div>
+        </form>
+
+        <div class="bkn-level-dspl" id="bkn-level-dspl">
+            <div class="bkn-level-dspl-1 bkn-level-dspl-item">
+                <img loading="lazy" src="#" alt="economy class">
+                <ol>
+                    <li>Allows most trackers across all sites</li>
+                    <li>Content and ads will likely be personalised</li>
+                    <li>Sites will work as expected</li>
+                    <li>Blocks known harmful trackers</li>
+                </ol>
+            </div>
+            <div class="bkn-level-dspl-2 bkn-level-dspl-item">
+                <img loading="lazy" src="#" alt="business class">
+                <ol>
+                    <li>Allows most trackers across all sites</li>
+                    <li>Content and ads will likely be personalised</li>
+                    <li>Sites will work as expected</li>
+                    <li>Blocks known harmful trackers</li>
+                </ol>
+            </div>
+            <div class="bkn-level-dspl-3 bkn-level-dspl-item">
+                <img src="#" alt="First class">
+                <ol>
+                    <li>Allows most trackers across all sites</li>
+                    <li>Content and ads will likely be personalised</li>
+                    <li>Sites will work as expected</li>
+                    <li>Blocks known harmful trackers</li>
+                </ol>
+            </div>
         </div>
     </div>
+   
+    <!--
+        1: display the travel menu
+        2: Passenger chooses date of travel, to and from.
+        3: customer presses next button
+        4: Display the different travel classes including the price.
+        5: Proceed to payment
+    -->
+    <!-- <a href="/landing page/home.html">HOME</a> -->
+    <script src="/Booking page/booking_pageScript.js"></script>
 </body>
 
 </html>

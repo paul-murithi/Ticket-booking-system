@@ -1,32 +1,91 @@
-img {
-    max-width: 100%;
+header {
+    background-image: linear-gradient(180deg,#868181, #000);
+    border: 1px solid #fff;
 }
-.main-container {
-    height: 300px;
-    background-color: bisque;
+.bkn-pg-main-banner .bkn-pg-banner-items{
     display: flex;
     flex-direction: column;
-    position: relative;
+    align-items: center;
 }
-.main-container div {
-    /* width: 100%; */
-    height: 200px;
+.bkn-pg-main-banner .bkn-pg-banner-items {
+    margin: 3rem 0;
 }
-.main-page-item-1 {
-    background-color: blue;
-    position: absolute;
-    z-index: 1;
-    top: 2rem;
+.bkn-pg-main-banner .bkn-pg-banner-items p {
+    color: #fff;
 }
-.main-page-item-2 {
-    background-color: aqua;
-    position: absolute;
-    z-index: 2;
-    top: 5rem;
+.login-navigation {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    margin: 3rem auto;
 }
-.main-page-item-3 {
-    background-color: blueviolet;
-    position: absolute;
-    z-index: 3;
-    top: 10rem;
+.bkn-pg-main-item-1 {
+    background-color: #fff;
+    width: 85%;
+    margin: 3rem 5rem auto;
+    border-radius: 15px;
+    padding: 8px;
+}
+.bkn-pg-main-item-1 .bkn-pg-input-items {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem;
+}
+.bkn-pg-main-item-1 .bkn-pg-form-fx {
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+}
+.bkn-pg-input-items input {
+    border: 2px solid rgb(137, 128, 185);
+    padding: 8px;
+    margin-top: 0.5rem;
+    width: 12rem;
+    border-radius: 5px;
+}
+.bkn-pg-input-items input:focus {
+    background-color: #cec7c7;
+    color: #000;
+}
+.bkn-pg-input-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.bkn-pg-input-items button {
+    width: 12rem;
+}
+.bkn-pg-input-items button:hover {
+    background-color: #cec7c7;
+    color: #000;
+    border: 2px solid rgb(137, 128, 185);
+}
+
+
+.bkn-level-dspl {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.bkn-level-dspl-item {
+    display: none;
+}
+.updatedList {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.updatedList:hover{
+    border: 2px solid rgb(137, 128, 185);
+    transform: scale(1.05);
+}
+
+.bkn-level-dspl-item {
+    padding: 20px;
+}
+.bkn-level-dspl-item ol li {
+    margin-top: 1rem;
 }
