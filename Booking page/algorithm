@@ -1,0 +1,23 @@
+The algorithm for booking and payment process.
+1: Customer chooses date, time of travel. Also where he is travelling to and From.
+    The system checks if all the inputs are filled.
+    If filled? (Proceed to step 2) else Return an error.
+
+2: Javascript displays the 3 classes of travel (Economy, Business and VIP). Each class will have different cost. The cards will display the features of each class at first.
+
+3: When the user clicks a card: The text that was displaying on the card is removed, and in its place information shows up about the cost of the travel based on that class. The user can select another card which also displays the same information based on its level and the destination of the travel.
+
+4: Each card once selected will have a confirm button. When the user clicks the confirm button, Step 5 will take place.
+
+5: The customer will select the seat number.
+
+6: Now the customer will be navigated to the final page(confirmTravel.html), to complete the payment.
+
+6: The page will have the following information: 
+    *The seat number - The customer's seat number he selected.
+    *Date and time of travel - As the customer chose.
+    *Amount - based on the class the customer chose.
+
+7: Customer confirms if all details are correct and pays.
+
+8: A confirmation page displays displaying all the information, and also a unique generated ID to be used as ticket number.
