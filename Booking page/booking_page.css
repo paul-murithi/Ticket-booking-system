@@ -25,9 +25,9 @@ header {
 .bkn-pg-main-item-1 {
     background-color: #fff;
     width: 85%;
-    margin: 3rem 5rem auto;
+    margin: 3rem auto;
     border-radius: 15px;
-    padding: 8px;
+    padding: 10px;
 }
 .bkn-pg-main-item-1 .bkn-pg-input-items {
     display: flex;
@@ -84,6 +84,7 @@ header {
 .updatedList:hover{
     border: 2px solid rgb(137, 128, 185);
     transform: scale(1.05);
+    background-color: #f6f4f0;
 }
 
 .bkn-level-dspl-item {
@@ -91,4 +92,60 @@ header {
 }
 .bkn-level-dspl-item ol li {
     margin-top: 1rem;
+}
+
+.bkn-proceed-btn {
+    margin-top: 1rem;
+    padding: 6px;
+}
+.bkn-proceed-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.tomato-display {
+    color: tomato;
+}
+/*################################################################################################################################*/
+table th,.show-booking-information {
+    background-color: #ebe5e5;
+    color: #000;
+    padding: 8px;
+}
+.display-seats-container {
+    display: none;
+}
+.updated-display-seats-container {
+    display: flex;
+    justify-content: center;
+    background-color: #fff;
+    margin: 3rem 0;
+}
+
+.show-booking-information {
+    border: 2px solid black;
+    padding: 1rem 8rem 1rem 1rem;
+}
+.show-booking-information p {
+    color: #000;
+    margin-top: 1rem;
+}
+.display-seats-container .seat-row-item table td {
+    height: 40px;
+    background-color: gray;
+    padding: 5px;
+    width: 40px;
+    cursor: pointer;
+    border-collapse: collapse;
+}
+.check-out-btn-item button {
+    margin-top: 3rem;
+    transition: 350ms;
+    padding: 8px;
+}
+.check-out-btn-item button:hover {
+    background-color: #fff;
+    border: 1px solid #000;
+    color: #000;
 }

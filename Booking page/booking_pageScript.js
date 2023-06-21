@@ -1,98 +1,8 @@
-/*
-//get the button element
-const js_nextBtn = document.getElementById('bkn-page-search-btn');
-js_nextBtn.addEventListener('click', handleNextBtn);//put event listener
-//object to store the travelling info
-const travelInfo = {};
 
-// Function to display the different classes of travel  
-function handleNextBtn() {
-  //get iput elements
-  const js_input_1 = document.getElementById('inpt-frm');
-  const js_input_2 = document.getElementById('inpt-to');
-  const js_input_3 = document.getElementById('inpt-date');
-  const input_1 = js_input_1.value;
-  const input_2 = js_input_2.value;
-  const input_3 = js_input_3.value;
-  //add travel info to the object
-  travelInfo.travellingFrom = input_1;
-  travelInfo.travellingTo = input_2;
-  travelInfo.dateOfTravel = input_3;
-  //check if the input elements are filled
-    if (js_input_1.value && js_input_2.value && js_input_3.value) {
-      const updatedElements = document.getElementsByClassName('bkn-level-dspl-item');
-      for (let i = 0; i < updatedElements.length; i++) {
-        updatedElements[i].classList.add('updatedList');
-      }
-    } else {
-      alert('Please fill in the inputs');
-    }
-  }
-  */
- /* Display the 3 classes of travel with the amount  */ /*
- //function to check which class the customer has selected.
-let travelAmount;
-const economyClass = document.getElementById('js-economy-class');
-const businessClass = document.getElementById('js-business-class');
-const vipClass = document.getElementById('js-VIP-class');
-
-economyClass.addEventListener('click', () => {
-  selectTravelClass('economy');
-});
-businessClass.addEventListener('click', () => {
-  selectTravelClass('Business');
-});
-vipClass.addEventListener('click', () => {
-  selectTravelClass('VIP');
-})
-
-function selectTravelClass(travel_class) {
-  if(travel_class === 'economy') {
-    travelAmount = 2000;
-    displayTravellInfo('economy');
-  }
-  else if(travel_class === 'Business') {
-    travelAmount = 2500;
-    displayTravellInfo('Business');
-  }
-  else if (travel_class === 'VIP') {
-    travelAmount = 3000;
-    displayTravellInfo('VIP');
-  }
-function displayTravellInfo(travel_class) {
-  const date = travelInfo.dateOfTravel;
-  const to = travelInfo.travellingTo;
-  const from = travelInfo.travellingFrom;
-  if(travel_class === 'economy') {
-    economyClass.innerHTML = `<ol>
-                                 <li>Date of travel: ${date}</li>
-                                 <li>From: ${to}</li>
-                                 <li>To: ${from}</li>
-                                 <li>Amount: ${travelAmount}</li>
-                              </ol>`;
-  }
-  else if(travel_class === 'Business'){
-    businessClass.innerHTML = `<ol>
-                                 <li>Date of travel: ${date}</li>
-                                 <li>From: ${to}</li>
-                                 <li>To: ${from}</li>
-                                 <li>Amount: ${travelAmount}</li>
-                              </ol>`;
-  }
-  else if(travel_class === 'VIP') {
-    vipClass.innerHTML = `<ol>
-                            <li>Date of travel: ${date}</li>
-                            <li>From: ${to}</li>
-                            <li>To: ${from}</li>
-                            <li>Amount: ${travelAmount}</li>
-                          </ol>`;
-  }
-    
-  }
-}*/
 // Get the button element
 const js_nextBtn = document.getElementById('bkn-page-search-btn');
 js_nextBtn.addEventListener('click', handleNextBtn);
+
 
 // Object to store the traveling info
 const travelInfo = {};
@@ -117,7 +27,7 @@ function handleNextBtn() {
     const updatedElements = document.getElementsByClassName('bkn-level-dspl-item');
     for (let i = 0; i < updatedElements.length; i++) {
       updatedElements[i].classList.toggle('updatedList');
-    }
+    } 
   } else {
     alert('Please fill in all the inputs');
   }
@@ -130,6 +40,19 @@ const economyClass = document.getElementById('js-economy-class');
 const businessClass = document.getElementById('js-business-class');
 const vipClass = document.getElementById('js-VIP-class');
 
+// Add event listeners for touch events
+/*
+economyClass.addEventListener('touchstart', () => {
+  selectTravelClass('economy');
+});
+businessClass.addEventListener('touchstart', () => {
+  selectTravelClass('business');
+});
+vipClass.addEventListener('touchstart', () => {
+  selectTravelClass('VIP');
+});
+*/
+// Add event listeners for mouse events
 economyClass.addEventListener('click', () => {
   selectTravelClass('economy');
 });
@@ -143,22 +66,60 @@ vipClass.addEventListener('click', () => {
 function selectTravelClass(travelClass) {
   if (travelClass === 'economy') {
     travelAmount = 2000;
-    displayTravelInfo(economyClass, travelClass);
+    displayTravelInfo(2000, 'economy');
   } else if (travelClass === 'business') {
     travelAmount = 2500;
-    displayTravelInfo(businessClass, travelClass);
+    displayTravelInfo(travelAmount, 'Business');
   } else if (travelClass === 'VIP') {
     travelAmount = 3000;
-    displayTravelInfo(vipClass, travelClass);
+    displayTravelInfo(travelAmount, 'VIP');
   }
 }
 
-function displayTravelInfo(element, travelClass) {
+const display_seats_container = document.querySelector('.display-seats-container');
+console.log(display_seats_container);
+
+function displayTravelInfo(amount, travelClass) {
   const { dateOfTravel, travellingFrom, travellingTo } = travelInfo;
+  const displayBusSeats = document.querySelector('.bkn-pg-main-item-1');
+
+  display_seats_container.classList.toggle('updated-display-seats-container');
+  displayBusSeats.innerHTML = "";
+  displayBusSeats.appendChild(display_seats_container);
+
+  const getSeatNumber = document.getElementById('display-seat-number');
+  const getAmount = document.getElementById('js-display-amount');
+  const travellingDestination = document.getElementById('js-display-travelling-to');
+  const travelSource = document.getElementById('js-display-travelling-from');
+  const getDate = document.getElementById('js-display-travelling-date');
+  const getTravelClass = document.getElementById('js-display-travelling-class');
+
+  //display travelling information on page
+  travelSource.innerText += travellingFrom;
+  travellingDestination.innerText += travellingTo;
+  getDate.innerText += dateOfTravel;
+  getAmount.innerText += amount;
+  getTravelClass.innerText += travelClass;
+  /*
+  To be used in updated versions of this project.
   element.innerHTML = `<ol>
                           <li>Date of travel: ${dateOfTravel}</li>
                           <li>From: ${travellingFrom}</li>
                           <li>To: ${travellingTo}</li>
                           <li>Amount: ${travelAmount}</li>
+                          <li>Travelling class: ${travelClass}</li>
+                          <button class = "bkn-proceed-btn" onclick = "displayBusSeats()">Proceed to booking</button>
                        </ol>`;
+                       */
+
+}
+
+
+//Get the proceed to booking button
+
+// proceedButton.addEventListener('click', displayBusSeats);
+
+function displayBusSeats() {
+  // const proceedButton = document.querySelector('.bkn-proceed-btn');
+  console.log('You fucker, son of a bitch!');
 }
