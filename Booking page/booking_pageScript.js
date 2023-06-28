@@ -87,7 +87,6 @@ function displayTravelInfo(amount, travelClass) {
   displayBusSeats.innerHTML = "";
   displayBusSeats.appendChild(display_seats_container);
 
-  const getSeatNumber = document.getElementById('display-seat-number');
   const getAmount = document.getElementById('js-display-amount');
   const travellingDestination = document.getElementById('js-display-travelling-to');
   const travelSource = document.getElementById('js-display-travelling-from');
@@ -115,11 +114,40 @@ function displayTravelInfo(amount, travelClass) {
 }
 
 
-//Get the proceed to booking button
 
-// proceedButton.addEventListener('click', displayBusSeats);
 
-function displayBusSeats() {
-  // const proceedButton = document.querySelector('.bkn-proceed-btn');
-  console.log('You fucker, son of a bitch!');
+// Get the seat elements
+const seatElements = document.querySelectorAll('.test-seat');
+      
+// Add event listener to each seat
+seatElements.forEach(seat => {
+  seat.addEventListener('click', handleSeatSelection);
+});
+
+// Handle seat selection
+function handleSeatSelection(event) {
+  // Toggle the selected state of the seat
+  event.target.classList.toggle('selected');
+}
+
+// Get the list of selected seats
+function getSelectedSeats() {
+  const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'));
+  return selectedSeats.map(seat => seat.textContent);
+}
+
+// Save the selected seats
+function saveSelectedSeats(seats) {
+  // You can store the selected seat numbers in a variable, send them to the server, or perform any other required action.
+  console.log('Selected seats:', seats);
+}
+
+// Proceed button click event
+const proceedButton = document.getElementById('proceed-btn');
+proceedButton.addEventListener('click', handleProceed);
+
+// Handle proceed button click
+function handleProceed() {
+  const selectedSeats = getSelectedSeats();
+  saveSelectedSeats(selectedSeats);
 }

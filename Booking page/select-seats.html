@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .seat {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: #f00;
+}
+
+button {
+  margin-top: 10px;
+}
+    </style>
+</head>
+<body>
+    <div id="bus-seats">
+        <!-- Seat numbers will be dynamically generated here -->
+    </div>
+      <button id="proceed-btn" disabled>Proceed</button>
+
+    <script>
+        // Get the bus seats container
+const busSeatsContainer = document.getElementById('bus-seats');
+
+// Generate the bus seat layout
+generateBusSeats();
+
+// Add event listener to each seat
+busSeatsContainer.addEventListener('click', handleSeatSelection);
+
+// Handle seat selection
+function handleSeatSelection(event) {
+  const selectedSeat = event.target.dataset.seat;
+
+  if (selectedSeat) {
+    // Toggle the selected state of the seat
+    event.target.classList.toggle('selected');
+
+    // Enable or disable the proceed button based on seat selection
+    const proceedButton = document.getElementById('proceed-btn');
+    proceedButton.disabled = getSelectedSeats().length === 0;
+  }
+}
+
+// Get the list of selected seats
+function getSelectedSeats() {
+  const selectedSeats = Array.from(document.querySelectorAll('.seat.selected'));
+  return selectedSeats.map(seat => seat.dataset.seat);
+}
+
+// Save the selected seats
+function saveSelectedSeats(seats) {
+  // You can store the selected seat numbers in a variable, send them to the server, or perform any other required action.
+  console.log('Selected seats:', seats);
+}
+
+// Function to generate the bus seat layout
+function generateBusSeats() {
+  for (let seatNumber = 1; seatNumber <= 44; seatNumber++) {
+    const seat = document.createElement('div');
+    seat.classList.add('seat');
+    seat.dataset.seat = seatNumber;
+    seat.textContent = seatNumber;
+    busSeatsContainer.appendChild(seat);
+  }
+}
+
+// Proceed button click event
+const proceedButton = document.getElementById('proceed-btn');
+proceedButton.addEventListener('click', handleProceed);
+
+// Handle proceed button click
+function handleProceed() {
+  const selectedSeats = getSelectedSeats();
+  saveSelectedSeats(selectedSeats);
+}
+
+    </script>
+</body>
+</html>

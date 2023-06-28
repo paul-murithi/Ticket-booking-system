@@ -4,7 +4,7 @@
 }
 body {
     background-color: #f3f3f3;
-    background-image: url(/images/23DT060_032-960x540.jpg);
+    background-image: url(/images/tops-3720049_1920.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -21,10 +21,14 @@ body {
 .signup-nav li a {
     text-decoration: none;
     color: #000;
+    transition: 150ms ease-in-out;
+}
+.signup-nav li a:active {
+    border-bottom: 2px solid #000;
 }
 .signup-nav li a:hover {
-    color: #808080;
-    border-bottom: 2px solid #808080;
+    border-bottom: 2px solid #000;
+    transform: scaleX(0.75);
 }
 form input {
     margin-top: 3rem;
@@ -42,7 +46,7 @@ form input:focus {
     align-items: center;
     justify-content: center;
     height: 28rem;
-    width: 95%;
+    max-width: 50%;
     background-color: #fff;
     margin: auto;
     box-shadow: #000;
@@ -50,6 +54,7 @@ form input:focus {
 }
 .signup-container .signup-heading-par {
     color: #808080;
+    margin-top: 1rem;
 }
 .signup-container form {
     display: flex;
