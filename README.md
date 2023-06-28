@@ -1,5 +1,5 @@
 # Ticket-booking-system
-# This project was done by Kirera Paul Murithi as part of my final year computer science course, 2023.
+
 
 Description:
 TransitEase Ticket Booking System is an open-source online platform that simplifies the process of booking bus tickets and managing travel arrangements. It provides a comprehensive solution for travelers to search, book, and manage their tickets seamlessly. With an intuitive user interface and robust backend infrastructure, this system offers a convenient and efficient way to plan and organize bus travel.
